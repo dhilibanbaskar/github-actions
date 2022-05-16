@@ -22,27 +22,7 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: gradle
-    - name: Build with Gradle
+    - name: Build and Test with Gradle
       uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
       with:
         arguments: build
-    
-  test:
-  
-    name: Testing
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: Setup JDK 1.8
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'
-          distribution: 'adopt'
-
-      - name: Grant Permissions to gradlew
-        run: chmod +x gradlew
-      - name: Test
-        run: ./gradlew clean build
