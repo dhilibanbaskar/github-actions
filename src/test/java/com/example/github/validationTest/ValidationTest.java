@@ -31,7 +31,7 @@ public class ValidationTest {
 
 			System.out.println(result.getMessage());
 		});
-		assertEquals(1, results.size());
+		assertEquals(2, results.size());
 	}
 
 	@Test
