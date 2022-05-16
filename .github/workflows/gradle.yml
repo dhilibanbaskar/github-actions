@@ -45,15 +45,3 @@ jobs:
         run: chmod +x gradlew
       - name: Test
         run: ./gradlew clean build
-
-
-  build-test:
-    name: Test Report
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Test Results
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        if: always()
-        with:
-          files: "test-results/**/*.xml"
