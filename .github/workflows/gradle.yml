@@ -26,3 +26,14 @@ jobs:
       uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
       with:
         arguments: build
+    
+    - name: Run Newman
+      uses: ./      
+      id: run-api-tests
+      with:
+        collection: "./NewmanCli/Newman_collection.json"
+        reporters: cli
+    
+    - name: Export Summary from Outputs
+      run: |
+        echo ${{ steps.run-api-tests.outputs.summary }}
