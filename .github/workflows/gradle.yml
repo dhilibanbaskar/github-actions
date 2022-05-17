@@ -32,7 +32,7 @@ jobs:
       id: run-api-tests
       uses: ./      
       env:
-          GITHUB_TOKEN: ${{ github.token }}
+          token: ${{ secrets.ACCESS_TOKEN }}
       with:
         collection: "./NewmanCli/Newman_collection.json"
         reporters: cli
