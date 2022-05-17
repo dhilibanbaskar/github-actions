@@ -27,10 +27,10 @@ jobs:
       with:
         arguments: build
   
-  test:
+  newman:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/newmanv@1
+    - uses: actions/checkout@v3
     - name: Run Newman
       uses: ./      
       id: run-api-tests
