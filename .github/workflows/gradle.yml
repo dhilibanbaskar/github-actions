@@ -31,8 +31,6 @@ jobs:
     - name: Run Newman
       id: run-api-tests
       uses: ./      
-      env:
-          token: ${{ secrets.ACCESS_TOKEN }}
       with:
         collection: "./NewmanCli/Newman_collection.json"
         reporters: cli
