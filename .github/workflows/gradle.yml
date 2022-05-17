@@ -29,11 +29,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run Newman
-      env:
-        GITHUB_TOKEN: ${{ github.token }}
       uses: ./      
       id: run-api-tests
       with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
         collection: "./NewmanCli/Newman_collection.json"
         reporters: cli
     
