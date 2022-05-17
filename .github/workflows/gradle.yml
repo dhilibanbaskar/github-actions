@@ -30,7 +30,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/newmanv@1
     - name: Run Newman
       uses: ./      
       id: run-api-tests
