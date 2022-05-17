@@ -6,9 +6,6 @@ on:
   pull_request:
     branches: [ master ]
 
-permissions:
-  contents: read
-
 jobs:
   build:
 
@@ -32,7 +29,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run Newman
-      uses: ./      
+      uses: ./
       id: run-api-tests
       with:
         collection: "./NewmanCli/Newman_collection.json"
