@@ -88,3 +88,4 @@ outputs:
     description: Full summmary object in json format
 runs:
   using: 'node12'
+  main: 'index.js'
