@@ -19,6 +19,6 @@ public class GithubActionsController {
 	
 	@GetMapping("/get")
 	public Optional<String> getGreetings() {
-		return Optional.of("Hi, Welcome!");
+		return Optional.of("Hi, Welcome!!");
 	}
 }
