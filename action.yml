@@ -87,5 +87,4 @@ outputs:
   summary_full:
     description: Full summmary object in json format
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
+  using: 'ubuntu-latest'
