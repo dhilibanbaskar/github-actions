@@ -31,6 +31,8 @@ jobs:
     - name: Run Newman
       id: run-api-tests
       uses: ./      
+      env:
+          GITHUB_TOKEN: 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
       with:
         collection: "./NewmanCli/Newman_collection.json"
         reporters: cli
