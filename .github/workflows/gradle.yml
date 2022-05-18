@@ -32,7 +32,6 @@ jobs:
       uses: ./
       id: run-api-tests
       with:
-        token: ${{ github.token }}
         collection: "./NewmanCli/Newman_collection.json"
         reporters: cli
     
