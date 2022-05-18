@@ -56,6 +56,7 @@ public class ValidationTest {
 		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
 		Validator validator = factory.getValidator();
 
+		
 		Actions actions = Actions.builder().name("Drake Scott").number("98947752").address("Dark horse street 1983").build();
 
 		Set<ConstraintViolation<Actions>> results = validator.validate(actions);
