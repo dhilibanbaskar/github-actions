@@ -31,8 +31,9 @@ jobs:
     - name: Run Newman
       uses: ./
       id: run-api-tests
+      env:
+          GITHUB_TOKEN: ${{ github.token }}
       with:
-        token: ${{ GITHUB_TOKEN }}
         collection: "./NewmanCli/Newman_collection.json"
         reporters: cli
     
