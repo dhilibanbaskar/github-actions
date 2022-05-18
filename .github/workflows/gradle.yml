@@ -31,8 +31,9 @@ jobs:
     - name: Run Newman
       uses: ./
       id: run-api-tests
-      with:
+      env:
         token: dummytoken
+      with:
         collection: "./NewmanCli/Newman_collection.json"
         reporters: cli
     
