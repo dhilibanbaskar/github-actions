@@ -34,6 +34,7 @@ jobs:
       with:
         collection: "./NewmanCli/Newman_collection.json"
         reporters: cli
+    - run: newman run "./NewmanCli/Newman_collection.json"
     
     - name: Export Summary from Outputs
       run: |
